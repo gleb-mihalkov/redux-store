@@ -1,7 +1,10 @@
+import { StoreState } from './StoreState';
+import { GetStoreState } from './GetStoreState';
+
 /**
  * Экземпляр хранилища.
  */
-export interface Store {
+export interface Store<S extends StoreState> {
   /**
    * Полное имя хранилища.
    */
@@ -21,4 +24,10 @@ export interface Store {
    * Путь к состоянию хранилища в глобальном состоянии.
    */
   path: string[];
+
+  /**
+   * Извлекает состояние хранилища из глобального состояния приложения.
+   * @param rootState Глобальное состояние приложения.
+   */
+  getState: GetStoreState<S>;
 }
