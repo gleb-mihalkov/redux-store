@@ -1,0 +1,13 @@
+✔ name @done(20-01-23 13:04)
+✔ path @done(20-01-23 13:04)
+✔ baseName @done(20-01-23 13:04)
+✔ parentName @done(20-01-23 13:04)
+☐ getState
+☐ createSelector
+☐ createRootSelector
+☐ createComplexSelector
+☐ createAction
+☐ createReducer
+☐ createComplexReducer
+☐ composeReducers
+
