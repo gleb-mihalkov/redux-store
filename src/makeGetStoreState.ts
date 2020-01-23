@@ -10,32 +10,28 @@ import { getStoreStateNotFoundError } from './getStoreStateNotFoundError';
  * @param initialState Начальное состояние хранилища.
  */
 export const makeGetStoreState = <S extends StoreState>(
-  path: string[],
-  initialState: S
+  path: string[]
 ): GetStoreState<S> => {
   let cachedRootState: RootState | undefined;
   let cachedState: S | undefined;
   let isCached = false;
 
   const { length: pathLength } = path;
-  const lastIndex = pathLength - 1;
 
   const findState = (rootState: RootState): S => {
-    let currentNode: any = rootState;
+    let node: any = rootState;
 
     for (let i = 0; i < pathLength; i += 1) {
       const property = path[i];
-      const nextNode = currentNode[property];
 
-      if (nextNode === undefined && i < lastIndex) {
+      if (!(property in node)) {
         throw new Error(getStoreStateNotFoundError(path));
       }
 
-      currentNode = nextNode;
+      node = node[property];
     }
 
-    const state = currentNode === undefined ? initialState : currentNode;
-    return state;
+    return node;
   };
 
   return (rootState): S => {

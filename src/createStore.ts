@@ -10,17 +10,14 @@ import { StoreState } from './StoreState';
  * @param name Полное имя хранилища.
  * @param initialState Начальное состояние хранилища.
  */
-export const createStore = <S extends StoreState>(
-  name: string,
-  initialState: S
-): Store<S> => {
+export const createStore = <S extends StoreState>(name: string): Store<S> => {
   if (!name) {
     throw new Error(getEmptyStoreNameError());
   }
 
   const path = getStorePath(name);
   const [baseName, parentName] = splitStorePath(path);
-  const getState = makeGetStoreState(path, initialState);
+  const getState = makeGetStoreState(path);
 
   return {
     name,

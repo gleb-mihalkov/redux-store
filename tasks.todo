@@ -2,7 +2,7 @@
 ✔ path @done(20-01-23 13:04)
 ✔ baseName @done(20-01-23 13:04)
 ✔ parentName @done(20-01-23 13:04)
-☐ getState
+✔ getState @done(20-01-23 15:29)
 ☐ createSelector
 ☐ createRootSelector
 ☐ createComplexSelector
