@@ -1,5 +1,5 @@
 {
-  "name": "redux-store",
+  "name": "redux-stores",
   "version": "1.0.0",
   "description": "Предоставляет дополнительные методы для работы с Redux",
   "main": "index.js",
@@ -8,7 +8,8 @@
     "start": "tsc --watch",
     "test": "mocha -r ts-node/register src/index.test.ts",
     "prebuild": "rimraf dist",
-    "prestart": "rimraf dist"
+    "prestart": "rimraf dist",
+    "release": "np"
   },
   "keywords": [
     "redux"
@@ -20,6 +21,7 @@
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
     "mocha": "^7.0.0",
+    "np": "^5.2.1",
     "rimraf": "^3.0.0",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
