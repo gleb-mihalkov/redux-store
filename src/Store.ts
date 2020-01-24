@@ -1,5 +1,6 @@
 import { StoreState } from './StoreState';
 import { GetStoreState } from './GetStoreState';
+import { CreateStoreSelector } from './CreateStoreSelector';
 
 /**
  * Экземпляр хранилища.
@@ -30,4 +31,11 @@ export interface Store<S extends StoreState> {
    * @param rootState Глобальное состояние приложения.
    */
   getState: GetStoreState<S>;
+
+  /**
+   * Создает селектор, который извлекает данные из состояния хранилища с
+   * помощью указанной функции.
+   * @param getData Извлекает данные из состояния хранилища.
+   */
+  createSelector: CreateStoreSelector<S>;
 }

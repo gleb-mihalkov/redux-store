@@ -3,7 +3,7 @@
 ✔ baseName @done(20-01-23 13:04)
 ✔ parentName @done(20-01-23 13:04)
 ✔ getState @done(20-01-23 15:29)
-☐ createSelector
+✔ createSelector @done(20-01-24 12:27)
 ☐ createRootSelector
 ☐ createComplexSelector
 ☐ createAction
