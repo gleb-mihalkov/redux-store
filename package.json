@@ -9,7 +9,7 @@
     "test": "mocha -r ts-node/register src/index.test.ts",
     "prebuild": "rimraf dist",
     "prestart": "rimraf dist",
-    "release": "np"
+    "release": "np --no-yarn"
   },
   "keywords": [
     "redux"
